@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리커넥트 XR 서비스</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo" aria-label="파동 홈으로 이동">
+      <div class="logo-icon">
+        <img src="./img/header_logo.png" alt="파동 로고">
+      </div>
+      <span class="icon_name">파동<span>[Grow Office]</span></span>
+    </a>
+
+    <nav aria-label="주요 메뉴">
+      <a href="https://v0-xr-reconnect-service.vercel.app/checklist">나의은둔테스트</a>
+      <a href="sub_1.html">그로우오피스 프로젝트</a>
+      <a href="sub_2.html">서비스 소개</a>
+      <a href="#" class="open-login">회원가입/로그인</a>
+    </nav>
+
+    <div class="user-icon">
+      <button id="openModal" class="open-login" type="button" aria-label="로그인 창 열기">
+        <img src="./img/header_icon.png" alt="로그인">
+      </button>
+    </div>
+
+    <div class="memu_ham">
+      <input type="checkbox" id="check_box" aria-label="모바일 메뉴 열기">
+      <label for="check_box" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div id="side_menu">
+        <ul>
+          <li><a href="https://v0-xr-reconnect-service.vercel.app/checklist">나의은둔테스트</a></li>
+          <li><a href="sub_1.html">그로우오피스 프로젝트</a></li>
+          <li><a href="sub_2.html">서비스 소개</a></li>
+          <li><a href="#" class="open-login">회원가입/로그인</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="main_con">
+    <section class="main_int" aria-label="메인 영상">
+      <video id="mainVideo" loop playsinline muted autoplay preload="metadata" data-toggle-sound="true">
+        <source src="./img/main2.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <section class="main_soge" aria-label="XR 리커넥트 서비스 소개">
+      <div class="text_section">
+        <h2>XR리커넥트 서비스란?</h2>
+        <p>
+          안전한 가상 공간에서 사회 적응과<br>
+          실전 상황을 단계적으로 경험하며, 사회적 역량을 익히고<br>
+          <span class="highlight">현실 사회에 안정적으로 적응할 수 있도록 돕는 서비스</span>입니다.
+        </p>
+        <p>
+          이는 세상으로 나아가는 가장 <span class="highlight">안전한 징검다리 역할</span>이 되어줍니다.
+        </p>
+      </div>
+
+      <div class="slider_section">
+        <div class="slider_container">
+          <div class="slide item1">
+            <div class="slide_top_text">성장 지표 분석</div>
+            <div class="slide_image"><img src="./img/그래프.gif" alt="성장 지표"></div>
+            <div class="slide_bottom_text">데이터 기반 피드백</div>
+          </div>
+
+          <div class="slide item2">
+            <div class="slide_top_text">안전한 징검다리 역할</div>
+            <div class="slide_image"><img src="./img/다리.gif" alt="징검다리 역할"></div>
+            <div class="slide_bottom_text">실패해도 괜찮은 연습 환경</div>
+          </div>
+
+          <div class="slide item3">
+            <div class="slide_top_text">맞춤형 프로필</div>
+            <div class="slide_image"><img src="./img/카드.gif" alt="맞춤형 프로필"></div>
+            <div class="slide_bottom_text">개인별 역량 관리</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="xr-grow-wrapper" aria-label="Grow Office 소개">
+      <div class="grow-info">
+        <h1>Grow Office</h1>
+        <p class="subtitle">첫번째 연결 그로우 오피스<br>더 현실적이고, 더 안전하고, 더 지속 가능하게</p>
+        <a class="btn-detail" href="sub_2.html">자세히보기</a>
+      </div>
+
+      <div class="grow-slider-container" id="sliderContainer" aria-label="Grow Office 핵심 카드 슬라이더">
+        <div class="grow-slider-track">
+          <article class="grow-card active">
+            <h3>Interest<br>Driven<br>Placement</h3>
+            <p class="card-title">흥미 기반 부서 배치</p>
+            <p class="card-desc">획일적인 교육이 아닌, 사전 설문을 통해 디자인·기획 등 사용자가 선호하는 분야의 부서를 결정하여 진입 장벽을 최소화 합니다.</p>
+          </article>
+
+          <article class="grow-card">
+            <h3>Small-Step<br>Tasking</h3>
+            <p class="card-title">저강도 직무 시뮬레이션</p>
+            <p class="card-desc">메일 보내기, 복사하기 등 아주 기초적인 업무부터 시작하여 거부감 없이 성취감을 쌓도록 설계되었습니다.</p>
+          </article>
+
+          <article class="grow-card">
+            <h3>Safe<br>Social AI</h3>
+            <p class="card-title">AI NPC 협업</p>
+            <p class="card-desc">실제 사람과의 대면이 두려운 이들을 위해 AI NPC 동료를 배치하여, 가상 공간에서 안전하게 대화와 협업 기능을 훈련합니다.</p>
+          </article>
+
+          <article class="grow-card">
+            <h3>Space<br>Adaptation</h3>
+            <p class="card-title">1인칭 시점 환경</p>
+            <p class="card-desc">텍스트 위주 학습을 넘어 XR 오피스 환경에서 '사무실'이라는 공간에 대한 공포증을 극복하고 현장감을 익힙니다.</p>
+          </article>
+
+          <article class="grow-card">
+            <h3>Continuous<br>Growth</h3>
+            <p class="card-title">지속적인 성장</p>
+            <p class="card-desc">업무 적응도를 분석하여 맞춤형 피드백을 제공하고 다음 단계의 목표를 제시합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="main_vr" aria-label="Grow Office 콘텐츠">
+      <div class="vr_header">
+        <h1>Grow office contents</h1>
+        <a class="btn-detail" href="./sub_2.html">자세히보기</a>
+      </div>
+
+      <div class="vr_slider_container" id="vrSlider">
+        <div class="vr_slider_track" id="vrTrack">
+          <article class="vr_slide active">
+            <div class="img-box">
+              <img src="./img/main_vr_1.png" alt="VR 콘텐츠 화면 1">
+            </div>
+            <div class="slide-text">
+              <h3>자기 주도형 진로 탐색 (Career Path)</h3>
+              <p>심층적인 적성 검사와 XR 기술 기반의 다채로운 직무 체험을 결합하여, 다양한 산업군을 미리 경험해 봄으로써 나에게 가장 잘 맞는 진로를 객관적으로 탐색하고 구체적으로 설계합니다.</p>
+            </div>
+          </article>
+
+          <article class="vr_slide">
+            <div class="img-box">
+              <img src="./img/main_vr_2_new.png" alt="VR 콘텐츠 화면 2">
+            </div>
+            <div class="slide-text">
+              <h3>실전형 가상 직무 체험 (Job Training)</h3>
+              <p>실제 업무 현장과 유사하게 구현된 가상 환경에서 직무 기반 실습을 진행하며, 난이도별 미션을 차근차근 완수함으로써 실무에 필요한 기초적인 직업 역량을 체계적으로 습득합니다.</p>
+            </div>
+          </article>
+
+          <article class="vr_slide">
+            <div class="img-box">
+              <img src="./img/main_vr_3.png" alt="VR 콘텐츠 화면 3">
+            </div>
+            <div class="slide-text">
+              <h3>안심 소통 라운지 (VR Interaction)</h3>
+              <p>아바타를 활용한 비대면 소통 훈련. 익명성이 보장된 안전한 환경에서 타인과 대화하고 협력하며 심리적 장벽을 낮춥니다.</p>
+            </div>
+          </article>
+
+          <article class="vr_slide">
+            <div class="img-box">
+              <img src="./img/main_vr_4_new.png" alt="VR 콘텐츠 화면 4">
+            </div>
+            <div class="slide-text">
+              <h3>협업 프로젝트 제작 (Project Build)</h3>
+              <p>팀 단위로 프로젝트 기획부터 최종 결과물 완성까지의 전 과정을 동료들과 함께 주도하며, 이 과정에서 실전 협업 감각을 익히고 공동의 목표 달성을 통한 높은 성취감을 경험합니다.</p>
+            </div>
+          </article>
+
+          <article class="vr_slide">
+            <div class="img-box">
+              <img src="./img/main_vr_5.png" alt="VR 콘텐츠 화면 5">
+            </div>
+            <div class="slide-text">
+              <h3>행동 데이터 분석 리포트 (Data Insight)</h3>
+              <p>사용자의 소통 빈도 및 과제 해결 속도 등 가상공간 내 모든 활동 데이터를 정밀하게 분석하며, 이를 바탕으로 개인의 강점과 보완점을 한눈에 파악할 수 있는 맞춤형 성장 지표를 제공합니다.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="main_visi" aria-label="비전">
+      <p>Our Vision</p>
+      <p>“<span>우리의 비전</span>”</p>
+      <p>
+        우리는 XR 기반 사회 적응 훈련을 통해<br>
+        은둔 청년이 안전한 가상 공간에서 소통과 협업을 경험하고,<br>
+        현실 사회로 한 걸음씩 나아갈 수 있도록 돕고자 합니다.<br>
+        사회적 고립 문제 해결에 기여하는 실질적인 사회 복귀 서비스를 만드는 것이 우리의 비전입니다.
+      </p>
+    </section>
+
+    <section class="main_prog" aria-label="프로그램 과정">
+      <img src="./img/main_pro.png" alt="Grow Office 프로그램 과정">
+    </section>
+
+    <section class="main_team" aria-label="팀 소개">
+      <h2 class="team_title">OUR TEAM</h2>
+      <div class="teamate">
+        <article>
+          <div class="teamateimg"><img src="./img/박희원.png" alt="박희원"></div>
+          <div>
+            <p class="name">박희원</p>
+            <p class="role">팀장/기획</p>
+            <p class="desc">프로젝트 총괄 및 기획 담당</p>
+          </div>
+        </article>
+        <article>
+          <div class="teamateimg"><img src="./img/김가영.png" alt="김가영"></div>
+          <div>
+            <p class="name">김가영</p>
+            <p class="role">영상/디자인</p>
+            <p class="desc">콘텐츠 및 UI/UX 디자인 담당</p>
+          </div>
+        </article>
+        <article>
+          <div class="teamateimg"><img src="./img/박소희.png" alt="박소희"></div>
+          <div>
+            <p class="name">박소희</p>
+            <p class="role">영상/디자인</p>
+            <p class="desc">콘텐츠 및 UI/UX 디자인 담당</p>
+          </div>
+        </article>
+        <article>
+          <div class="teamateimg"><img src="./img/신현아.png" alt="신현아"></div>
+          <div>
+            <p class="name">신현아</p>
+            <p class="role">개발</p>
+            <p class="desc">XR 플랫폼 개발 및 웹사이트 퍼블리쉬</p>
+          </div>
+        </article>
+        <article>
+          <div class="teamateimg"><img src="./img/최정후.png" alt="최정후"></div>
+          <div>
+            <p class="name">최정후</p>
+            <p class="role">개발</p>
+            <p class="desc">XR 플랫폼 개발 및 유지보수 담당</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2025 WAVE XR. All rights reserved.
+  </footer>
+
+  <div class="floating-wrapper">
+    <div class="quick-menu-container">
+      <ul class="menu-items">
+        <li>
+          <a href="index.html">
+            <img src="./img/Floating_logo.png" alt="" class="menu-icon">
+            <span>그로우오피스</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="open-login">
+            <img src="./img/Floating_login.png" alt="" class="menu-icon">
+            <span>로그인</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://dashboardwave.vercel.app/">
+            <img src="./img/Floating_data.png" alt="" class="menu-icon">
+            <span>내데이터</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://v0-xr-reconnect-service.vercel.app/checklist">
+            <img src="./img/Floating_test.png" alt="" class="menu-icon">
+            <span>은둔테스트</span>
+          </a>
+        </li>
+      </ul>
+      <button class="menu-btn" type="button" aria-label="퀵 메뉴">
+        <img src="./img/Floating_more.png" alt="" class="quick-menu-img">
+        <span class="menu-text">더보기</span>
+      </button>
+    </div>
+
+    <button id="scrollTopBtn" class="scroll-top-btn hidden" type="button" aria-label="맨 위로 이동">
+      <img src="./img/top_arrow.png" alt="">
+    </button>
+  </div>
+
+  <div id="modalContainer" class="modal-container" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button id="closeModal" class="close-btn" type="button" aria-label="로그인 창 닫기">&times;</button>
+      <h2 id="loginTitle">로그인</h2>
+
+      <form class="login-form">
+        <div class="input-group">
+          <span class="icon" aria-hidden="true">👤</span>
+          <input type="text" placeholder="아이디를 입력해주세요.">
+        </div>
+        <div class="input-group">
+          <span class="icon" aria-hidden="true">🔒</span>
+          <input type="password" placeholder="비밀번호를 입력해주세요.">
+        </div>
+        <button type="submit" class="login-btn">로그인</button>
+      </form>
+
+      <div class="sub-links">
+        <a href="#">회원가입</a>
+        <span class="divider">|</span>
+        <a href="#">아이디·비밀번호 찾기</a>
+      </div>
+
+      <div class="social-login">
+        <p>SNS계정으로 로그인</p>
+        <div class="social-icons">
+          <button class="icon-naver" type="button">N</button>
+          <button class="icon-kakao" type="button">K</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

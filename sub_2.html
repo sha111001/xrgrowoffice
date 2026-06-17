@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VR CONTENT</title>
+  <link rel="stylesheet" href="sub2.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo" aria-label="파동 홈으로 이동">
+      <div class="logo-icon">
+        <img src="./img/header_logo.png" alt="파동 로고">
+      </div>
+      <span class="icon_name">파동<span>[Grow Office]</span></span>
+    </a>
+
+    <nav aria-label="주요 메뉴">
+      <a href="https://v0-xr-reconnect-service.vercel.app/checklist">나의은둔테스트</a>
+      <a href="sub_1.html">그로우오피스 프로젝트</a>
+      <a href="sub_2.html">서비스 소개</a>
+      <a href="#" class="open-login">회원가입/로그인</a>
+    </nav>
+
+    <div class="user-icon">
+      <button id="openModal" class="open-login" type="button" aria-label="로그인 창 열기">
+        <img src="./img/header_icon.png" alt="로그인">
+      </button>
+    </div>
+
+    <div class="memu_ham">
+      <input type="checkbox" id="check_box" aria-label="모바일 메뉴 열기">
+      <label for="check_box" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div id="side_menu">
+        <ul>
+          <li><a href="https://v0-xr-reconnect-service.vercel.app/checklist">나의은둔테스트</a></li>
+          <li><a href="sub_1.html">그로우오피스 프로젝트</a></li>
+          <li><a href="sub_2.html">서비스 소개</a></li>
+          <li><a href="#" class="open-login">회원가입/로그인</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="sub2_con">
+    <section class="sub2_title" aria-label="VR 콘텐츠 소개">
+      <p class="eyebrow">은둔청년들을 위한</p>
+      <h1 class="sub2_Vr">VR CONTENT</h1>
+      <p class="summary">그로우 오피스는 사회 적응, 소통, 협업, 상황 대응까지 단계적으로 훈련할 수 있도록 VR 콘텐츠를 구성했습니다.</p>
+    </section>
+
+    <div class="sub2_btn" aria-label="VR 콘텐츠 슬라이드 이동 버튼">
+      <button class="nav-btn active" type="button" data-index="0">프로젝트 진행</button>
+      <button class="nav-btn" type="button" data-index="1">사회성 훈련</button>
+      <button class="nav-btn" type="button" data-index="2">NPC 상호작용</button>
+      <button class="nav-btn" type="button" data-index="3">업무 수행 능력</button>
+      <button class="nav-btn" type="button" data-index="4">돌발 상황 대처</button>
+      <button class="nav-btn" type="button" data-index="5">결과 브리핑</button>
+    </div>
+
+    <section class="slider-wrapper" aria-label="VR 콘텐츠 슬라이더">
+      <button class="slide-btn prev" id="prevBtn" type="button" aria-label="이전 슬라이드">
+        <img src="./img/sub2/arrow_pre.png" alt="">
+      </button>
+
+      <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <article class="slide">
+            <video id="mainVideo" controls muted autoplay loop playsinline preload="metadata">
+              <source src="./img/main2.mp4" type="video/mp4">
+            </video>
+          </article>
+          <article class="slide"><img src="./img/sub2/img2_new.png" alt="VR 콘텐츠 슬라이드 2"></article>
+          <article class="slide"><img src="./img/sub2/img3_new.png" alt="VR 콘텐츠 슬라이드 3"></article>
+          <article class="slide"><img src="./img/sub2/img4_new.png" alt="VR 콘텐츠 슬라이드 4"></article>
+          <article class="slide"><img src="./img/sub2/img5_new.png" alt="VR 콘텐츠 슬라이드 5"></article>
+          <article class="slide"><img src="./img/sub2/img6_new.png" alt="VR 콘텐츠 슬라이드 6"></article>
+        </div>
+      </div>
+
+      <button class="slide-btn next" id="nextBtn" type="button" aria-label="다음 슬라이드">
+        <img src="./img/sub2/arrow_next.png" alt="">
+      </button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2025 WAVE XR. All rights reserved.
+  </footer>
+
+  <div class="floating-wrapper">
+    <div class="quick-menu-container">
+      <ul class="menu-items">
+        <li>
+          <a href="index.html">
+            <img src="./img/Floating_logo.png" alt="" class="menu-icon">
+            <span>그로우오피스</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="open-login">
+            <img src="./img/Floating_login.png" alt="" class="menu-icon">
+            <span>로그인</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://dashboardwave.vercel.app/">
+            <img src="./img/Floating_data.png" alt="" class="menu-icon">
+            <span>내데이터</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://v0-xr-reconnect-service.vercel.app/checklist">
+            <img src="./img/Floating_test.png" alt="" class="menu-icon">
+            <span>은둔테스트</span>
+          </a>
+        </li>
+      </ul>
+      <button class="menu-btn" type="button" aria-label="퀵 메뉴">
+        <img src="./img/Floating_more.png" alt="" class="quick-menu-img">
+        <span class="menu-text">더보기</span>
+      </button>
+    </div>
+
+    <button id="scrollTopBtn" class="scroll-top-btn hidden" type="button" aria-label="맨 위로 이동">
+      <img src="./img/top_arrow.png" alt="">
+    </button>
+  </div>
+
+  <div id="modalContainer" class="modal-container" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button id="closeModal" class="close-btn" type="button" aria-label="로그인 창 닫기">&times;</button>
+      <h2 id="loginTitle">로그인</h2>
+
+      <form class="login-form">
+        <div class="input-group">
+          <span class="icon" aria-hidden="true">👤</span>
+          <input type="text" placeholder="아이디를 입력해주세요.">
+        </div>
+        <div class="input-group">
+          <span class="icon" aria-hidden="true">🔒</span>
+          <input type="password" placeholder="비밀번호를 입력해주세요.">
+        </div>
+        <button type="submit" class="login-btn">로그인</button>
+      </form>
+
+      <div class="sub-links">
+        <a href="#">회원가입</a>
+        <span class="divider">|</span>
+        <a href="#">아이디·비밀번호 찾기</a>
+      </div>
+
+      <div class="social-login">
+        <p>SNS계정으로 로그인</p>
+        <div class="social-icons">
+          <button class="icon-naver" type="button">N</button>
+          <button class="icon-kakao" type="button">K</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
